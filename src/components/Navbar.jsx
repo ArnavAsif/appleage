@@ -22,7 +22,11 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/" className={`${navLinkStyle} ${navLinkUnderline}`}>
+        <NavLink
+          to="/"
+          className={`${navLinkStyle} ${navLinkUnderline}`}
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
           HOME
         </NavLink>
       </li>
@@ -30,6 +34,7 @@ const Navbar = () => {
         <NavLink
           to="/contact"
           className={`${navLinkStyle} ${navLinkUnderline}`}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           CONTACT US
         </NavLink>
