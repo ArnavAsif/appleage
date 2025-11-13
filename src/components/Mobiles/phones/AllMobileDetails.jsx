@@ -87,6 +87,12 @@ const AllMobileDetails = () => {
             >
               {mobile.inStock ? "Available" : "Out of Stock"}
             </span>
+            {mobile.batteryHealth && (
+              <span className="px-3 py-1 rounded-full text-sm font-semibold bg-yellow-600">
+                Battery Health {mobile.batteryHealth}
+              </span>
+            )}
+
             <span
               className={`px-3 py-1 rounded-full text-sm font-semibold ${
                 mobile.used ? "bg-red-600" : "bg-green-600"
